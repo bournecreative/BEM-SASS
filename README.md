@@ -1,12 +1,9 @@
-# BoilerPlate CSS Rules using BEM and SASS
+# Grid System
 
-Experiementing with Sass generating functonal css rules. When looking at the SCSS files, there is very little SCSS in comparison to the generated CSS file. This demonstrates how we can begin to build out standard CSS rule sets from style guides.
+Experiementing with Sass and BEM to generate functonal css rules.
 
 ## Details
 
-I will continue to build on this. Just usign SASS variables, loops and maps, a lot can be acomplished. And its pretty straightforward and maintainable once put into action.
+When looking at the SCSS files, there is very little SCSS in comparison to the generated CSS file. This demonstrates how we can begin to build out foundational rules sets that can help maintain goverence of branding style guides.
 
-So far..
-
-- Stand font classes created based on fictional font rules
-- Standard color classes created based on fictional color palette
+The main purpose of this exercise is to focus on making use of functionaility provided by Sass's features like maps, loops and variables.
