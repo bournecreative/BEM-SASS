@@ -1,0 +1,11 @@
+$colors: (
+  "black": "#000000",
+  "white": "#FFFFFF",
+  "grey": "#212121",
+);
+
+@each $key, $val in $colors {
+  .font-color--#{$key} {
+    color: $val;
+  }
+}
