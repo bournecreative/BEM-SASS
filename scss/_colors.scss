@@ -1,0 +1,11 @@
+$colors: (
+  primaryDark: #212121,
+  primaryLight: #fff,
+  contrast: #e40084,
+);
+
+@each $key, $val in $colors {
+  .text-color--#{$key} {
+    color: $val;
+  }
+}

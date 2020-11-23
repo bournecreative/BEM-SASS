@@ -3,7 +3,7 @@ $fontSizes: 8px, 10px, 12px, 14px, 16px, 20px, 24px, 28px, 32px, 36px, 40px,
   96px, 100px, 104px, 108px, 112px, 114px, 116px, 120px;
 
 @for $i from 1 through length($fontSizes) {
-  text--#{nth($fontSizes, $i)} {
+  .text--#{nth($fontSizes, $i)} {
     font-size: #{nth($fontSizes, $i)};
   }
 }
