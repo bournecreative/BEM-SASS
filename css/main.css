@@ -130,11 +130,23 @@
   color: #212121;
 }
 
+.background-color--primaryDark {
+  color: #212121;
+}
+
 .text-color--primaryLight {
   color: #fff;
 }
 
+.background-color--primaryLight {
+  color: #fff;
+}
+
 .text-color--contrast {
+  color: #e40084;
+}
+
+.background-color--contrast {
   color: #e40084;
 }
 

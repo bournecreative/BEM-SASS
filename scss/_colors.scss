@@ -8,4 +8,7 @@ $colors: (
   .text-color--#{$key} {
     color: $val;
   }
+  .background-color--#{$key} {
+    color: $val;
+  }
 }
