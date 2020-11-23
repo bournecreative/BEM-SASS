@@ -1,22 +1,32 @@
 $maxCol: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
-$ColSpace: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13;
 
+html,
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
 .grid {
   width: 100%;
-  border: 1px solid grey;
-  box-sizing: border-box;
-  display: block;
-  float: left;
-}
-.col {
-  background: #ccc;
-  box-sizing: border-box;
-  display: block;
-  float: left;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-@for $i from 1 through length($maxCol) {
-  .col.col--#{nth($maxCol, $i)} {
-    width: $i / length($maxCol) * 100%;
+.col {
+  background: #ccc;
+  border: 1px solid #212121;
+}
+
+@for $width from 1 through length($maxCol) {
+  .col.col--#{nth($maxCol, $width)} {
+    flex-basis: $width / length($maxCol) * 100%;
   }
 }
