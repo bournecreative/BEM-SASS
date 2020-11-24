@@ -1,4 +1,4 @@
-$maxCol: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+// $maxCol: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
 
 html,
 body {
@@ -13,20 +13,44 @@ body {
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
+  position: relative;
 }
+
 .grid {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .col {
   background: #ccc;
-  border: 1px solid #212121;
+  border: 1px solid black;
 }
 
-@for $width from 1 through length($maxCol) {
-  .col.col--#{nth($maxCol, $width)} {
-    flex-basis: $width / length($maxCol) * 100%;
+$maxCol: 12;
+@for $width from 1 through $maxCol {
+  .col--#{$width} {
+    flex-basis: $width / $maxCol * 100%;
+    max-width: $width / $maxCol * 100%;
+  }
+}
+
+$breakPoints: (
+  xs: 320,
+  md: 768,
+  lg: 1025,
+  xl: 1200,
+);
+
+@each $key, $value in $breakPoints {
+  @media screen and (min-width: $value + px) {
+    @for $width from 1 through $maxCol {
+      .col-#{$key}--#{$width} {
+        flex-basis: $width / $maxCol * 100%;
+        max-width: $width / $maxCol * 100%;
+      }
+    }
   }
 }
