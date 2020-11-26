@@ -1,9 +1,8 @@
-$fontSizes: 8px, 10px, 12px, 14px, 16px, 20px, 24px, 28px, 32px, 36px, 40px,
-  44px, 48px, 52px, 56px, 60px, 64px, 68px, 72px, 76px, 80px, 84px, 88px, 92px,
-  96px, 100px, 104px, 108px, 112px, 114px, 116px, 120px;
+$fontSizes: 8, 10, 12, 14, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64,
+  68, 72, 76, 80, 84, 88, 92, 96, 100, 104, 108, 112, 114, 116, 120;
 
 @for $i from 1 through length($fontSizes) {
   .text--#{nth($fontSizes, $i)} {
-    font-size: #{nth($fontSizes, $i)};
+    font-size: #{nth($fontSizes, $i)}px;
   }
 }

@@ -1,6 +1,6 @@
 $colors: (
   primaryDark: #212121,
-  primaryLight: #fff,
+  primaryLight: #ccc,
   contrast: #e40084,
 );
 
@@ -9,6 +9,6 @@ $colors: (
     color: $val;
   }
   .background-color--#{$key} {
-    color: $val;
+    background: $val;
   }
 }
